@@ -5,6 +5,10 @@ async function compile() {
     let section2 = await fetch('section2.tex').then(response => response.text());
     let jsarticle = await fetch('jsarticle.cls').then(response => response.text());
 
+    let imageURL = 'assets/example.png';
+
+    mainLatex = mainLatex.replace("\\includegraphics{example.png}", "\\includegraphics{" + imageURL + "}");
+
     mainLatex = mainLatex.replace("\\input{section1}", section1);
     mainLatex = mainLatex.replace("\\input{section2}", section2);
 
