@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LaTeX Compiler</title>
+        <link rel="stylesheet" href="assets/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/tex.js@0.10.0/build/tex.js"></script>
+        <script src="assets/main.js" defer></script>
+    </head>
+    <body>
+        <h1>LaTeX Compiler with jsarticle</h1>
+
+        <textarea id="latex-main" rows="10" cols="50">
+            \documentclass{jsarticle}
+            \begin{document}
+            \input{section1.tex}
+            \input{section2.tex}
+            \end{document}
+        </textarea>
+
+        <button onclick="compile()">Compile LaTeX</button>
+
+        <p>After clicking the button, the compiled PDF will be available to download.</p>
+    </body>
